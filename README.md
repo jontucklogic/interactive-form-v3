@@ -1,4 +1,4 @@
-Project 3 - Interactive Form
+<h2>Project 3 - Interactive Form</h2>
 In this project, I used JavaScript to enhance an interactive registration form for a fictional Full Stack conference.
 
 Using supplied HTML and CSS files, I added my own JavaScript to make the form more user-friendly by:
