@@ -14,4 +14,3 @@ Using supplied HTML and CSS files, I added my own JavaScript to make the form mo
     <li>For example, in the Name field, the user is updated with a validation error as they type: If the field is empty, they will be guided with a validation message saying the field cannot be blank. This is really helpful so that the information can be entered correctly before submitting the form.</li>
     <li>The same is used for the Email field. In addition to displaying a "this field cannot be blank" message, a different message is displayed instead, for when the user has typed in a value, but that value is not in the proper format that it needs to be</li>
 </ul>
- 
