@@ -21,7 +21,7 @@ const bitcoin = document.querySelector('#bitcoin');
 
 // Initial state when the page first loads
 document.addEventListener('DOMContentLoaded', () => {
-  // Set 'Name' field in to 'focus' state
+  // Set 'Name' field into 'focus' state
   name.focus();
 
   // Hide 'Other Job Role' field
@@ -65,8 +65,8 @@ design.addEventListener('change', (e) => {
   for (let i = 1; i < colorOptions.length; i++) {
     const colorTheme = colorOptions[i].getAttribute('data-theme');
 
-    colorOptions[0].textContent = 'Please select a color';
-    color.value = 'Please select a color';
+    colorOptions[0].textContent = 'Please select a T-shirt theme.';
+    color.value = 'Please select a T-shirt theme.';
 
     if (target.value === colorTheme) {
       colorOptions[i].hidden = false;
@@ -113,6 +113,8 @@ payment.addEventListener('change', (e) => {
 
 });
 
+/* -------------------------------------------------------------------------------- */
+
 // Validation functions
 // Name validator
 function nameValidation() {
@@ -126,9 +128,9 @@ function nameValidation() {
 // Email validator
 function emailValidation() {
   const emailValue = email.value;
-  const emailValidator = /^[a-z]+@[a-z]+\.com$/.test(emailValue);
+  const emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  return emailValidator;
+  return emailValidator.test(emailValue.toLowerCase());
 }
 
 // Activities validator
@@ -158,6 +160,8 @@ function cvvValidation() {
 
   return isCvvValid;
 }
+
+/* -------------------------------------------------------------------------------- */
 
 // On Form submission validation
 function formSubmitValidation(isElementValid, element, e) {
@@ -196,6 +200,8 @@ function errorDisplay(element, type, validationType) {
   }
 }
 
+/* -------------------------------------------------------------------------------- */
+
 // Extra Credit steps
 // Check to see if whether or not activies conflict with each other's day and time
 function activityFilter(targetElement) {
@@ -230,6 +236,8 @@ email.addEventListener('keyup', (e) => {
   // Validate Email
   errorDisplay(email, 'Email', emailValidation());
 })
+
+/* -------------------------------------------------------------------------------- */
 
 // 'Form' submission event
 form.addEventListener('submit', (e) => {
